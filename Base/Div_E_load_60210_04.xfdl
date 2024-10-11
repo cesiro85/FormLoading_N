@@ -20,7 +20,7 @@ this.Div_E_load_60210_04_oninit = function(obj:nexacro.Form,e:nexacro.EventInfo)
 	this.parent.parent.parent.parent.parent.parent.TextArea00.set_value(this.parent.parent.parent.parent.parent.parent.TextArea00.value + "\nSubForm_04_oninit");
 	// test
 //3cfca58
-
+// git test
 };
 ]]></Script>
   </Form>
