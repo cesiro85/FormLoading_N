@@ -50,7 +50,7 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 this.Div_E_load_60210_01_onclose = function(obj:nexacro.Form,e:nexacro.CloseEventInfo)
 {
 	trace("MainForm_01_onclose" + " // e.fromobject.parent.name=" + e.fromobject.parent.name + " // e.fromreferenceobject=" + e.fromreferenceobject.parent.name);
-// 2
+// 1
 };
 ]]></Script>
   </Form>
