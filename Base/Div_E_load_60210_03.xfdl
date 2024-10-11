@@ -35,6 +35,7 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.parent.parent.parent.parent.TextArea00.set_value("");
 	this.reload();
+//fork 수정
 };
 ]]></Script>
   </Form>
