@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
   <Form id="Div_E_load_60210_04" width="310" height="180" titletext="New Form" oninit="Div_E_load_60210_04_oninit" onload="Div_E_load_60210_04_onload" onclose="Div_E_load_60210_04_onclose" background="aquamarine">
     <Layouts>
