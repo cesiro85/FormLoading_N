@@ -274,7 +274,7 @@ if (!nexacro.WebBrowser)
         {
             this._setAccessibilityStatFocus(evt_name);
 
-            //RP 74655 Runtime¿¡¼­ combo°¡ disable ÀÏ °æ¿ì Æ÷Ä¿½º ÀÌ»ó Çö»ó
+            //RP 74655 Runtimeì—ì„œ comboê°€ disable ì¼ ê²½ìš° í¬ì»¤ìŠ¤ ì´ìƒ í˜„ìƒ
             //if (nexacro._Browser == "Runtime" && !this._isEnable()) return;
         }
         this._apply_setfocus(evt_name, self_flag, refer_lose_focus, refer_new_focus);
