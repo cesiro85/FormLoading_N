@@ -1,4 +1,4 @@
-//==============================================================================
+ï»¿//==============================================================================
 //
 //  TOBESOFT Co., Ltd.
 //  Copyright 2017 TOBESOFT Co., Ltd.
@@ -471,8 +471,8 @@ if (!nexacro.WebView)
 
 	_pWebView.on_load_handler = function (docurl)
     {
-        // [23/03/13] - ¿ÀÁöÇö - [RP 95548][WRE¿¡¼­ WebView ½ÇÇà½Ã Cross Domain »óÈ²ÀÌ¸é goBack, goForward, callScript°¡ µ¿ÀÛÇÏÁö ¾Ê´Â Çö»óÀÇ ¸Å´º¾ó ±â¼ú ¿äÃ»]
-        // goBack, goFoward, callScript µ¿ÀÛ½Ã _current_url °ªÀÌ º¯°æµÇÁö ¾Ê¾Æ isCrossDomain Ã¼Å©°¡ Á¤»óÀûÀ¸·Î µÇÁö ¾Ê´Â Çö»ó ÇØ¼Ò
+        // [23/03/13] - ì˜¤ì§€í˜„ - [RP 95548][WREì—ì„œ WebView ì‹¤í–‰ì‹œ Cross Domain ìƒí™©ì´ë©´ goBack, goForward, callScriptê°€ ë™ì‘í•˜ì§€ ì•ŠëŠ” í˜„ìƒì˜ ë§¤ë‰´ì–¼ ê¸°ìˆ  ìš”ì²­]
+        // goBack, goFoward, callScript ë™ì‘ì‹œ _current_url ê°’ì´ ë³€ê²½ë˜ì§€ ì•Šì•„ isCrossDomain ì²´í¬ê°€ ì •ìƒì ìœ¼ë¡œ ë˜ì§€ ì•ŠëŠ” í˜„ìƒ í•´ì†Œ
         if (this._current_url != docurl)
         {
             this._current_url = docurl;
@@ -491,16 +491,16 @@ if (!nexacro.WebView)
 		var ifrm_elem = this._ifrm_elem;
 		if (ifrm_elem)
 		{
-			// [23/03/03] - ¿ÀÁöÇö - [RP 95548][WRE¿¡¼­ WebView ½ÇÇà½Ã Cross Domain »óÈ²ÀÌ¸é goBack, goForward, callScript°¡ µ¿ÀÛÇÏÁö ¾Ê´Â Çö»óÀÇ ¸Å´º¾ó ±â¼ú ¿äÃ»]
-            //    - [13dd7520 Ä¿¹Ô: RP:88886 WebView about:blank¿¡¼­ document¿¡ Á¢±ÙµÇÁö ¾Ê´Â ¹®Á¦ ¼öÁ¤] °Ç¿¡¼­ CrossDomain Ã¼Å© ÁÖ¼® Ã³¸® ºÎºĞ ¿øº¹
-            // [23/10/26] - ¿ÀÁöÇö - [RP 97974][Environment.networksecurelevel = allÀÏ °æ¿ì webview callscript °¡ crossdomainÀÌ¸é È£ÃâÀÌµÇÁö ¾Ê½À´Ï´Ù.]
-            //    - Cy_WebView.cpp ´Ü¿¡¼­ ¾ÈÀüÇÏÁö ¾ÊÀº µµ¸ŞÀÎ¿¡ Á¢±ÙÇÒ °ÍÀÎÁö È®ÀÎÇÏ´Â ÆË¾÷À» ¶ç¿ì´Â ¹æ½ÄÀ¸·Î º¯°æÇÏ±â À§ÇØ ÇÏ±â Á¶°Ç¹® ÁÖ¼®Ã³¸®.
+			// [23/03/03] - ì˜¤ì§€í˜„ - [RP 95548][WREì—ì„œ WebView ì‹¤í–‰ì‹œ Cross Domain ìƒí™©ì´ë©´ goBack, goForward, callScriptê°€ ë™ì‘í•˜ì§€ ì•ŠëŠ” í˜„ìƒì˜ ë§¤ë‰´ì–¼ ê¸°ìˆ  ìš”ì²­]
+            //    - [13dd7520 ì»¤ë°‹: RP:88886 WebView about:blankì—ì„œ documentì— ì ‘ê·¼ë˜ì§€ ì•ŠëŠ” ë¬¸ì œ ìˆ˜ì •] ê±´ì—ì„œ CrossDomain ì²´í¬ ì£¼ì„ ì²˜ë¦¬ ë¶€ë¶„ ì›ë³µ
+            // [23/10/26] - ì˜¤ì§€í˜„ - [RP 97974][Environment.networksecurelevel = allì¼ ê²½ìš° webview callscript ê°€ crossdomainì´ë©´ í˜¸ì¶œì´ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.]
+            //    - Cy_WebView.cpp ë‹¨ì—ì„œ ì•ˆì „í•˜ì§€ ì•Šì€ ë„ë©”ì¸ì— ì ‘ê·¼í•  ê²ƒì¸ì§€ í™•ì¸í•˜ëŠ” íŒì—…ì„ ë„ìš°ëŠ” ë°©ì‹ìœ¼ë¡œ ë³€ê²½í•˜ê¸° ìœ„í•´ í•˜ê¸° ì¡°ê±´ë¬¸ ì£¼ì„ì²˜ë¦¬.
 			// if (!this._isCrossDomain(this._current_url) || this._current_url == "") // 2014-06-26 pss [REQ_36583] - for crossdomain check
             {
-                // [23/07/21] - ¿ÀÁöÇö - NRE¿¡¼­ À¥ºäÄÄÆ÷³ÍÆ® post ¹æ½Ä Ã³¸® ½Ã µ¿ÀÛ µÇÁö ¾Ê´Â Çö»ó (RP 95548ÀÌ ¿øÀÎ) - v24 Ã³¸®¿ë
-                // WebView »ı¼º½Ã URLÀ» ÁÖÁö ¾Ê°í callscript¸¦ ÅëÇØ htmlÀ» ¶ç¿ì´Â °æ¿ì "this._current_url"°ªÀÌ ºñ¾î ÀÖÀ½
-                // _isCrossDomain ÇÔ¼ö¿¡¼­ "this._current_url"°ªÀÌ ¾ø´Â °æ¿ì CrossDomain È¯°æÀÌ¶ó°í ÆÇ´ÜÇÔ.
-                // ´Ù¸¥ °÷¿¡¼­µµ _isCrossDomain ÇÔ¼ö¸¦ »ç¿ëÁßÀÓÀ¸·Î callscript¿¡¼­¸¸ ¿¹¿ÜÀûÀ¸·Î this._current_url °ªÀÌ ºñ¾î ÀÖ¾îµµ ½ÇÇàÇÒ ¼ö ÀÖµµ·Ï º¯°æ
+                // [23/07/21] - ì˜¤ì§€í˜„ - NREì—ì„œ ì›¹ë·°ì»´í¬ë„ŒíŠ¸ post ë°©ì‹ ì²˜ë¦¬ ì‹œ ë™ì‘ ë˜ì§€ ì•ŠëŠ” í˜„ìƒ (RP 95548ì´ ì›ì¸) - v24 ì²˜ë¦¬ìš©
+                // WebView ìƒì„±ì‹œ URLì„ ì£¼ì§€ ì•Šê³  callscriptë¥¼ í†µí•´ htmlì„ ë„ìš°ëŠ” ê²½ìš° "this._current_url"ê°’ì´ ë¹„ì–´ ìˆìŒ
+                // _isCrossDomain í•¨ìˆ˜ì—ì„œ "this._current_url"ê°’ì´ ì—†ëŠ” ê²½ìš° CrossDomain í™˜ê²½ì´ë¼ê³  íŒë‹¨í•¨.
+                // ë‹¤ë¥¸ ê³³ì—ì„œë„ _isCrossDomain í•¨ìˆ˜ë¥¼ ì‚¬ìš©ì¤‘ì„ìœ¼ë¡œ callscriptì—ì„œë§Œ ì˜ˆì™¸ì ìœ¼ë¡œ this._current_url ê°’ì´ ë¹„ì–´ ìˆì–´ë„ ì‹¤í–‰í•  ìˆ˜ ìˆë„ë¡ ë³€ê²½
                 return nexacro._WebViewPluginElement.prototype.injectScript.apply(ifrm_elem, arguments);
             }
 		}
@@ -512,14 +512,14 @@ if (!nexacro.WebView)
         var ifrm_elem = this._ifrm_elem;
         if (ifrm_elem)
         {
-            // [23/03/03] - ¿ÀÁöÇö - [RP 95548][WRE¿¡¼­ WebView ½ÇÇà½Ã Cross Domain »óÈ²ÀÌ¸é goBack, goForward, callScript°¡ µ¿ÀÛÇÏÁö ¾Ê´Â Çö»óÀÇ ¸Å´º¾ó ±â¼ú ¿äÃ»]
-            // [13dd7520 Ä¿¹Ô: RP:88886 WebView about:blank¿¡¼­ document¿¡ Á¢±ÙµÇÁö ¾Ê´Â ¹®Á¦ ¼öÁ¤] °Ç¿¡¼­ CrossDomain Ã¼Å© ÁÖ¼® Ã³¸® ºÎºĞ ¿øº¹
+            // [23/03/03] - ì˜¤ì§€í˜„ - [RP 95548][WREì—ì„œ WebView ì‹¤í–‰ì‹œ Cross Domain ìƒí™©ì´ë©´ goBack, goForward, callScriptê°€ ë™ì‘í•˜ì§€ ì•ŠëŠ” í˜„ìƒì˜ ë§¤ë‰´ì–¼ ê¸°ìˆ  ìš”ì²­]
+            // [13dd7520 ì»¤ë°‹: RP:88886 WebView about:blankì—ì„œ documentì— ì ‘ê·¼ë˜ì§€ ì•ŠëŠ” ë¬¸ì œ ìˆ˜ì •] ê±´ì—ì„œ CrossDomain ì²´í¬ ì£¼ì„ ì²˜ë¦¬ ë¶€ë¶„ ì›ë³µ
             if (!this._isCrossDomain(this._current_url) || this._current_url == "") // 2014-06-26 pss [REQ_36583] - for crossdomain check
             {
-                // [23/07/21] - ¿ÀÁöÇö - NRE¿¡¼­ À¥ºäÄÄÆ÷³ÍÆ® post ¹æ½Ä Ã³¸® ½Ã µ¿ÀÛ µÇÁö ¾Ê´Â Çö»ó (RP 95548ÀÌ ¿øÀÎ) - v24 Ã³¸®¿ë
-                // WebView »ı¼º½Ã URLÀ» ÁÖÁö ¾Ê°í callscript¸¦ ÅëÇØ htmlÀ» ¶ç¿ì´Â °æ¿ì "this._current_url"°ªÀÌ ºñ¾î ÀÖÀ½
-                // _isCrossDomain ÇÔ¼ö¿¡¼­ "this._current_url"°ªÀÌ ¾ø´Â °æ¿ì CrossDomain È¯°æÀÌ¶ó°í ÆÇ´ÜÇÔ.
-                // ´Ù¸¥ °÷¿¡¼­µµ _isCrossDomain ÇÔ¼ö¸¦ »ç¿ëÁßÀÓÀ¸·Î callscript¿¡¼­¸¸ ¿¹¿ÜÀûÀ¸·Î this._current_url °ªÀÌ ºñ¾î ÀÖ¾îµµ ½ÇÇàÇÒ ¼ö ÀÖµµ·Ï º¯°æ
+                // [23/07/21] - ì˜¤ì§€í˜„ - NREì—ì„œ ì›¹ë·°ì»´í¬ë„ŒíŠ¸ post ë°©ì‹ ì²˜ë¦¬ ì‹œ ë™ì‘ ë˜ì§€ ì•ŠëŠ” í˜„ìƒ (RP 95548ì´ ì›ì¸) - v24 ì²˜ë¦¬ìš©
+                // WebView ìƒì„±ì‹œ URLì„ ì£¼ì§€ ì•Šê³  callscriptë¥¼ í†µí•´ htmlì„ ë„ìš°ëŠ” ê²½ìš° "this._current_url"ê°’ì´ ë¹„ì–´ ìˆìŒ
+                // _isCrossDomain í•¨ìˆ˜ì—ì„œ "this._current_url"ê°’ì´ ì—†ëŠ” ê²½ìš° CrossDomain í™˜ê²½ì´ë¼ê³  íŒë‹¨í•¨.
+                // ë‹¤ë¥¸ ê³³ì—ì„œë„ _isCrossDomain í•¨ìˆ˜ë¥¼ ì‚¬ìš©ì¤‘ì„ìœ¼ë¡œ callscriptì—ì„œë§Œ ì˜ˆì™¸ì ìœ¼ë¡œ this._current_url ê°’ì´ ë¹„ì–´ ìˆì–´ë„ ì‹¤í–‰í•  ìˆ˜ ìˆë„ë¡ ë³€ê²½
                 ret = nexacro._WebViewPluginElement.prototype.injectScriptAndReturnPromise.apply(ifrm_elem, arguments);
             }
         }
